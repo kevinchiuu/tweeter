@@ -1,0 +1,14 @@
+header {
+  height: 400px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(166, 144, 190);
+  background-image: url(http://www.transparenttextures.com/patterns/3px-tile.png);
+}
+
+h2 {
+  color: white;
+}
