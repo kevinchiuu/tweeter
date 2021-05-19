@@ -1,0 +1,38 @@
+nav {
+  height: 120px;
+  width: 100%;
+  background-color: #4056a1;
+  display: flex;
+  justify-content: space-between;
+  z-index: 1;
+}
+
+.logo { 
+  font-family: "Bungee", cursive;
+  color: #FFF;
+  padding: 0 1.5em 0 1.5em;
+  display: flex;
+  align-items: center;
+}
+
+.nav-tweet {
+  padding: 0 1.5em 0 1.5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-tweet a {
+  color: white;
+  text-decoration: none;
+}
+
+.nav-tweet i {
+  color: red;
+}
+
+.nav-tweet .bold {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: bold;
+}
