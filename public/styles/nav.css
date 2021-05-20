@@ -5,6 +5,8 @@ nav {
   display: flex;
   justify-content: space-between;
   z-index: 1;
+  position: sticky;
+  top: 0;
 }
 
 .logo { 
