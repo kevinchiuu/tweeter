@@ -1,0 +1,52 @@
+.tweet-container {
+  margin: 1.5em 0 1.5em 0;
+}
+
+.tweet-box {
+  border: 4px solid black;
+  height: 200px;
+  padding: .5em .5em .5em .5em;
+  display: flex;
+  flex-direction: column
+}
+
+.tweet-intro {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: .5em;
+}
+
+.tweet-box p {
+  margin: 0;
+  padding:.5em 0 .5em 0;
+  max-width: 60ch;
+  overflow:scroll;
+  white-space: initial;
+  font-size: 25px;
+  font-style: normal;
+}
+
+.tweet-intro h6 {
+  margin: 0;
+}
+
+.tweet-box hr {
+  display: flex;
+  border: 2px solid black;
+  width: 100%;
+}
+
+.tweet-footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tweet-icons i {
+  margin-right: 0.5em;
+  font-size: 15px;
+  color: #4056a1
+}
+
+.tweet-icons :hover {
+  color: rgb(223, 143, 24);
+}
