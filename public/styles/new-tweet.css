@@ -3,6 +3,7 @@
   justify-content: center;
   flex-direction: column;
   padding: 0 0.5em 0 0.5em;
+  margin-top: 1em;
 }
 
 .tweet-area {
@@ -10,7 +11,7 @@
   outline: none;
   background-color: inherit;
   border-bottom: 5px solid black;
-  padding-top: 0.5em;
+  padding-top: 1em;
 }
 
 .tweet-button {
