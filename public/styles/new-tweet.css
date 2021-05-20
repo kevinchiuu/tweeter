@@ -1,7 +1,37 @@
-button {
+.new-tweet {
+  background-color: lightblue;
+}
+
+.tweet-form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 0.5em 0 0.5em;
+}
+
+.tweet-area {
+  border-style: none;
+}
+
+.tweet-button {
+  background-color: #4056a1;
+  font-family: "Bungee", cursive;
+  color: white;
+  border: none;
+  display: flex;
+  justify-content: left;
+}
+
+.tweet-btncount {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 0.5em;
+}
+
+.counter {
   font-family: "Bungee", cursive;
 }
 
-h2 {
-  color: black;
+.error {
+  color: red;
 }
