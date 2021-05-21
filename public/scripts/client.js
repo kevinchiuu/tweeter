@@ -80,7 +80,10 @@ $(document).ready(function() {
     $.ajax({
       url: '/tweets',
       type: 'POST',
-      data: $('#tweet-text').serialize()
+      data: $('#tweet-text').serialize(),
+      success: function(response) {
+        loadTweets(response);
+      }
     });
   });
 
@@ -96,4 +99,5 @@ $(document).ready(function() {
   };
 
   loadTweets();
+
 });
