@@ -18,3 +18,6 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## Screenshots
 
+!["screenshot description](https://github.com/kevinchiuu/tweeter/blob/master/public/images/ss1.png)
+!["screenshot description"](https://github.com/kevinchiuu/tweeter/blob/master/public/images/ss2.png)
+!["screenshot descript"](https://github.com/kevinchiuu/tweeter/blob/master/public/images/ss3.png)
