@@ -30,6 +30,7 @@ const data = [
   }
 ];
 
+// render html tweets element
 const renderTweets = function(tweets) {
  
   for (let tweet of tweets) {
@@ -39,6 +40,7 @@ const renderTweets = function(tweets) {
 
 };
 
+//create html tweet element
 const createTweetElement = function(tweet) {
 
   const $tweet = `
@@ -78,3 +80,19 @@ const createTweetElement = function(tweet) {
 
 renderTweets(data);
 
+$(document).ready('', function() {
+
+  $('form').on('submit', function(event) {
+
+    event.preventDefault();
+
+    $.ajax({
+      url: '/tweets',
+      type: 'POST',
+      data: $('form').serialize(),
+      success: success,
+    });
+
+  });
+
+});
