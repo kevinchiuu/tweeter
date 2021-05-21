@@ -86,14 +86,12 @@ $(document).ready(function() {
     if (tweetLength > 140) {
       $('#error-container').slideDown('slow', function() {
         $('#error-container').append(createErrorElement1());
-        $('#error-container').slideUp('slow');
       });
       return;
 
     } else if (tweetLength === 0) {
       $('#error-container').slideDown('slow', function() {
         $('#error-container').append(createErrorElement2());
-        $('#error-container').slideUp('slow');
       });
     }
 
@@ -109,7 +107,7 @@ $(document).ready(function() {
 
     $('textarea').val("");
     $('output').val(140);
-    $('error-container').val("");
+    $('#error-container').empty();
     $('output').text(140).removeClass('error');
   });
 
