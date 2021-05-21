@@ -46,7 +46,7 @@ const createTweetElement = function(tweet) {
         <hr>
 
         <div class="tweet-footer">
-          <h6> ${Math.floor((Date.now() - tweet.created_at) / 86400000)} days ago </h6>
+          <h6> ${timeago.format(tweet.create_at)}  days ago </h6>
       
           <div class="tweet-icons">
             <a href=""> <i class="fas fa-flag fa-xs"></i> </a>
