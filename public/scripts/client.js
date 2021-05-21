@@ -7,12 +7,13 @@
 
 // render html tweets element
 const renderTweets = function(tweets) {
- 
-  for (let tweet of tweets) {
-    const $tweetElem = createTweetElement(tweet);
-    $('#tweets-container').append($tweetElem);
-  }
 
+  $('#tweets-container').empty();
+
+  for (const tweet of tweets) {
+    const $tweetElem = createTweetElement(tweet);
+    $('#tweets-container').prepend($tweetElem);
+  }
 };
 
 // makes sure javascript string literals are protected from XSS
@@ -45,7 +46,7 @@ const createTweetElement = function(tweet) {
         <hr>
 
         <div class="tweet-footer">
-          <h6> times tamp </h6>
+          <h6> ${Math.floor((Date.now() - tweet.created_at) / 86400000)} days ago </h6>
       
           <div class="tweet-icons">
             <a href=""> <i class="fas fa-flag fa-xs"></i> </a>
