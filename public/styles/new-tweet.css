@@ -35,3 +35,23 @@
 .error {
   color: red;
 }
+
+@media only screen and (max-width: 1080px) {
+  .tweet-divider{
+    display: flex;
+    margin: 0;
+  }
+
+  .col1{
+    width: 100%;
+    -webkit-order: 1;
+    order: 1;
+  }
+
+  .col2{
+    width: 100%;
+    -webkit-order: 2;
+    order: 2;
+    margin-top: 2%;
+  }
+}

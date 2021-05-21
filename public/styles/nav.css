@@ -38,3 +38,10 @@ nav {
   font-family: "Source Sans Pro", sans-serif;
   font-weight: bold;
 }
+
+@media only screen and (max-width: 1080px) {
+  nav {
+    background-color: transparent;
+    position: absolute;
+  }
+}
