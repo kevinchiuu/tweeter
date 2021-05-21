@@ -9,11 +9,11 @@ $(document).ready(function() {
     const $counter = $(this).parent().find('.counter');
 
     $counter.text(charRemaining);
-
+    
     if (charRemaining < 0) {
       $counter.addClass('error');
 
-    } else if (charRemaining >= 0) {
+    } else {
       $counter.removeClass('error');
     }
   });
