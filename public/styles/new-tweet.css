@@ -36,6 +36,24 @@
   color: red;
 }
 
+.error1 {
+  border-style: solid;
+  color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Bungee", cursive;
+}
+
+.error2 {
+  border-style: solid;
+  color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Bungee", cursive;
+}
+
 @media only screen and (max-width: 1080px) {
   .tweet-divider{
     display: flex;

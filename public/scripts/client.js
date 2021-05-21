@@ -46,7 +46,7 @@ const createTweetElement = function(tweet) {
         <hr>
 
         <div class="tweet-footer">
-          <h6> ${timeago.format(tweet.create_at)}  days ago </h6>
+          <h6> ${timeago.format(tweet.create_at)} </h6>
       
           <div class="tweet-icons">
             <a href=""> <i class="fas fa-flag fa-xs"></i> </a>
@@ -61,7 +61,20 @@ const createTweetElement = function(tweet) {
   return $tweet;
 };
 
+//helper functions to show error messages
+const createErrorElement1 = function() {
+  $('#error-container').empty();
+  const $error = `<div class="error1"> TOO MANY CHARACTERS </div>`;
+  return $error;
+};
 
+const createErrorElement2 = function() {
+  $('#error-container').empty();
+  const $error = `<div class="error2"> PLEASE ENTER A TWEET </div>`;
+  return $error;
+};
+
+// events will fire after page loads
 $(document).ready(function() {
 
   $('#tweet-form').submit(function(event) {
@@ -71,10 +84,17 @@ $(document).ready(function() {
     const tweetLength = $("textarea").val().length;
 
     if (tweetLength > 140) {
-      alert('Too many characters');
+      $('#error-container').slideDown('slow', function() {
+        $('#error-container').append(createErrorElement1());
+        $('#error-container').slideUp('slow');
+      });
+
 
     } else if (tweetLength === 0) {
-      alert('Please enter text');
+      $('#error-container').slideDown('slow', function() {
+        $('#error-container').append(createErrorElement2());
+        $('#error-container').slideUp('slow');
+      });
     }
 
     $.ajax({
@@ -84,6 +104,10 @@ $(document).ready(function() {
     }).then((response)=> {
       loadTweets(response);
     });
+
+    $('textarea').val("");
+    $('output').val(140);
+    $('error-container').val("");
   });
 
   // fetching tweets with ajax
