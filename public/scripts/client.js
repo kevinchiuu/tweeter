@@ -88,7 +88,7 @@ $(document).ready(function() {
         $('#error-container').append(createErrorElement1());
         $('#error-container').slideUp('slow');
       });
-
+      return;
 
     } else if (tweetLength === 0) {
       $('#error-container').slideDown('slow', function() {
@@ -103,11 +103,14 @@ $(document).ready(function() {
       data: $('#tweet-text').serialize()
     }).then((response)=> {
       loadTweets(response);
+    }).catch(() => {
+      $('#error-container').slideDown('slow');
     });
 
     $('textarea').val("");
     $('output').val(140);
     $('error-container').val("");
+    $('output').text(140).removeClass('error');
   });
 
   // fetching tweets with ajax
@@ -118,6 +121,8 @@ $(document).ready(function() {
       dataType: 'JSON'
     }).then((response) => {
       renderTweets(response);
+    }).catch((error) => {
+      console.error(error);
     });
   };
 
