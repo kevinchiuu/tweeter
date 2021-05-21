@@ -14,13 +14,21 @@
   box-shadow: 10px 10px #6f83c2;
 }
 
-.tweet-intro {
+.profile-icon {
   display: flex;
-  justify-content: space-between;
-  padding-bottom: 1.5em;
 }
 
-.tweet-intro h3 {
+.profile-icon img {
+  height: 55%;
+  padding-right: .5em;
+}
+
+.tweet-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tweet-header h3 {
   margin: 0;
 }
 
@@ -33,7 +41,7 @@
   font-style: normal;
 }
 
-.tweet-intro h6 {
+.tweet-header h6 {
   margin: 0;
 }
 
