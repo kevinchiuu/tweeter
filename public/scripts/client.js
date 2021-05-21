@@ -9,10 +9,17 @@
 const renderTweets = function(tweets) {
  
   for (let tweet of tweets) {
-    const tweetElem = createTweetElement(tweet);
-    $('#tweets-container').append(tweetElem);
+    const $tweetElem = createTweetElement(tweet);
+    $('#tweets-container').append($tweetElem);
   }
 
+};
+
+// makes sure javascript string literals are protected from XSS
+const escape = function(str) {
+  let div = document.createElement("div");
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
 };
 
 //create html tweet element
@@ -24,16 +31,16 @@ const createTweetElement = function(tweet) {
 
         <div class="tweet-header">
           <div class="profile-icon">
-            <img class="tweet-avatar" src="${tweet.user.avatars}">
-            <h3> ${tweet.user.name} </h3>
+            <img class="tweet-avatar" src="${escape(tweet.user.avatars)}">
+            <h3> ${escape(tweet.user.name)} </h3>
           </div>
 
           <div class="tweet-handle">
-            <h3> ${tweet.user.handle} </h3>
+            <h3> ${escape(tweet.user.handle)} </h3>
           </div>
         </div>
 
-        <p> ${tweet.content.text} </p>
+        <p> ${escape(tweet.content.text)} </p>
         
         <hr>
 
@@ -54,18 +61,18 @@ const createTweetElement = function(tweet) {
 };
 
 
-$(document).ready('', function() {
+$(document).ready(function() {
 
   $('form').on('submit', function(event) {
 
     event.preventDefault();
+    console.log('success');
 
     $.ajax({
       url: '/tweets',
       type: 'POST',
       data: $('this').serialize()
     });
-
   });
 
   // fetching tweets with ajax
