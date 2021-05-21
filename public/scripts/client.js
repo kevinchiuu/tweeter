@@ -66,12 +66,20 @@ $(document).ready(function() {
   $('form').on('submit', function(event) {
 
     event.preventDefault();
-    console.log('success');
+
+    const tweetLength = $("textarea").val().length;
+
+    if (tweetLength > 140) {
+      alert('Too many characters');
+
+    } else if (tweetLength === 0) {
+      alert('Please enter text');
+    }
 
     $.ajax({
       url: '/tweets',
       type: 'POST',
-      data: $('this').serialize()
+      data: $('form').serialize()
     });
   });
 
