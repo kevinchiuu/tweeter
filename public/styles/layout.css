@@ -13,6 +13,21 @@ html {
 /*
  * Global layout stuff
  */
+.tweet-divider{
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+  margin-top: 5%;
+}
+
+ .col1 {
+   width: 40%;
+ }
+
+ .col2 {
+   width: 60%;
+ }
 
 body {
   color: #545149;
@@ -25,6 +40,26 @@ main {
   width: 90%;
   margin: 0 5% 0 5%;
   background-color: inherit;
+}
+
+@media only screen and (max-width: 1080px) {
+  .tweet-divider{
+    display: flex;
+    margin: 0;
+  }
+
+  .col1{
+    width: 100%;
+    -webkit-order: 1;
+    order: 1;
+  }
+
+  .col2{
+    width: 100%;
+    -webkit-order: 2;
+    order: 2;
+    margin-top: 2%;
+  }
 }
 
 /*
