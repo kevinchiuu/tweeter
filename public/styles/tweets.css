@@ -6,6 +6,7 @@
   border: 4px solid black;
   height: 220px;
   padding: .5em .5em .5em .5em;
+  margin: 1em 0 1em 0;
   display: flex;
   flex-direction: column;
 }
