@@ -80,10 +80,9 @@ $(document).ready(function() {
     $.ajax({
       url: '/tweets',
       type: 'POST',
-      data: $('#tweet-text').serialize(),
-      success: function(response) {
-        loadTweets(response);
-      }
+      data: $('#tweet-text').serialize()
+    }).then((response)=> {
+      loadTweets(response);
     });
   });
 
