@@ -2,7 +2,7 @@
 /* eslint-env jquery */
 $(document).ready(function() {
 
-  $("#tweet-text").on('keyup', function() {
+  $("textarea").keyup(function() {
     const max = 140;
     const charCount = $(this).val().length;
     const charRemaining = max - charCount;

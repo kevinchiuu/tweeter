@@ -63,7 +63,7 @@ const createTweetElement = function(tweet) {
 
 $(document).ready(function() {
 
-  $('form').on('submit', function(event) {
+  $('#tweet-form').submit(function(event) {
 
     event.preventDefault();
 
@@ -79,7 +79,7 @@ $(document).ready(function() {
     $.ajax({
       url: '/tweets',
       type: 'POST',
-      data: $('form').serialize()
+      data: $('#tweet-text').serialize()
     });
   });
 
