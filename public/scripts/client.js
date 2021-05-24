@@ -93,6 +93,7 @@ $(document).ready(function() {
       $('#error-container').slideDown('slow', function() {
         $('#error-container').append(createErrorElement2());
       });
+      return;
     }
 
     $.ajax({
